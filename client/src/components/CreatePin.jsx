@@ -35,7 +35,7 @@ function CreatePin() {
 
         console.log("SENDING REQUEST");
 
-      await API.post("/pins/create", formData, {
+      await API.post("/pins", formData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
