@@ -14,12 +14,7 @@ const router = express.Router();
 router.get("/", getAllPins);
 router.get("/user/:id", getUserPins);
 router.get("/search", searchPins);
-router.post(
-  "/create",
-  authMiddleware,
-  upload.single("image"),
-  createPin
-);
+router.post("/", createPin);
 router.delete(
   "/:id",
   authMiddleware,
